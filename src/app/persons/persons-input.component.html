@@ -1,0 +1,8 @@
+<label for="name">Name: </label>
+<!-- below is the "local reference approach, but this misses the two-way binding feature" -->
+<!-- <input type="text" id="name" #personNameElmt>
+<button (click)="addNewPerson(personNameElmt.value)">Add Person</button> -->
+
+<!-- below is the ngNodel approach -->
+<input type="text" id="name" [(ngModel)]="newPersonName">
+<button (click)="addNewPerson()">Add Person</button>
